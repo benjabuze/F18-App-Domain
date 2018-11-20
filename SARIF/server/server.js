@@ -10,7 +10,7 @@ var MemoryStore =session.MemoryStore;
 
 const cors = require('cors')
 const corsOptions = {
-    origin: 'http://localhost:3001',
+    origin: 'http://localhost:4200',
     optionsSuccessStatus: 200,
     'Access-Control-Allow-Methods': 'GET,PUT,POST,DELETE'
 }
