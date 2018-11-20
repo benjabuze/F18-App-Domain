@@ -87,3 +87,7 @@ table, h3, h2, td {
   width: 40%;
   height: 90%;
 }
+
+.btn-link{
+  line-height: .4;
+}

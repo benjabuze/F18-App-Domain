@@ -10,3 +10,9 @@ td, th {
 table, h3, h2, td {
   color: black;
 }
+
+#center {
+  position: relative;
+  width: 10%;
+  margin: 0 auto;
+}

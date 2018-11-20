@@ -45,13 +45,38 @@ export class DashboardComponent implements OnInit {
 
   public lineChartLabels:Array<any> = ['Net Income', 'Total Assets'];
   public pieChartData:number[] = [0, 0];
-  public pieChartType:string = 'pie';
+  public pieChartType:string = 'bar';
 
   public lineChartEquityLabels:Array<any> = ['Net Income', 'Equity'];
   public pieChartEquityData:number[] = [0, 0];
   public colors:Array<any> = [{
     backgroundColor: ['rgba(0,128,0,0.7)', 'rgba(255,0,0,0.7)']}
   ];
+  public colors2:Array<any> = [{
+    backgroundColor: ['rgba(255,0,255,0.7)', 'rgba(0,255,255,0.7)']}
+  ];
+
+  public barChartOptions:any = {
+    scaleShowVerticalLines:false,
+    responsive:true,
+    legend: {
+      display: false
+    },
+    tooltips: {
+      callbacks: {
+        label: function(tooltipItem) {
+          return tooltipItem.yLabel;
+        }
+      }
+    },
+    scales: {
+      yAxes: [{
+        ticks: {
+          beginAtZero: true
+        }
+      }]
+    }
+  };
 
   constructor(
     private cserv: CoAService,

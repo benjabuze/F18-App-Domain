@@ -2,8 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ec3ea87d-68f5-40e3-aaaf-6edd681a32bf" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/app/model/journal.model.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/model/journal.model.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../client2/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client2/src/app/balance-sheet/balance-sheet.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../client2/src/app/balance-sheet/balance-sheet.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client2/src/app/dashboard/dashboard.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/../client2/src/app/dashboard/dashboard.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client2/src/app/dashboard/dashboard.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../client2/src/app/dashboard/dashboard.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client2/src/app/dashboard/dashboard.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../client2/src/app/dashboard/dashboard.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client2/src/app/income-statement/income-statement.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../client2/src/app/income-statement/income-statement.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client2/src/app/individual-journal/individual-journal.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/../client2/src/app/individual-journal/individual-journal.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client2/src/app/individual-journal/individual-journal.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../client2/src/app/individual-journal/individual-journal.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client2/src/app/individual-journal/individual-journal.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../client2/src/app/individual-journal/individual-journal.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client2/src/app/journalize/journalize.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../client2/src/app/journalize/journalize.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client2/src/app/trial-balance/trial-balance.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../client2/src/app/trial-balance/trial-balance.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -201,8 +211,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/model/journal.model.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="17" column="9" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />
+            <state relative-caret-position="153">
+              <caret line="9" column="33" lean-forward="true" selection-start-line="9" selection-start-column="33" selection-end-line="9" selection-end-column="33" />
             </state>
           </provider>
         </entry>
@@ -333,9 +343,9 @@
       <path value="$PROJECT_DIR$/package.json" />
     </packageJsonPaths>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="256" />
-    <option name="y" value="81" />
+  <component name="ProjectFrameBounds" extendedState="1">
+    <option name="x" value="222" />
+    <option name="y" value="67" />
     <option name="width" value="1535" />
     <option name="height" value="930" />
   </component>
@@ -446,10 +456,10 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="155784000" />
+    <option name="totallyTimeSpent" value="156384000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="256" y="81" width="1535" height="930" extended-state="0" />
+    <frame x="222" y="67" width="1535" height="930" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.27322033" />
@@ -683,8 +693,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/model/journal.model.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="9" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />
+        <state relative-caret-position="153">
+          <caret line="9" column="33" lean-forward="true" selection-start-line="9" selection-start-column="33" selection-end-line="9" selection-end-column="33" />
         </state>
       </provider>
     </entry>

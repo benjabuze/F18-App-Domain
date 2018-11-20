@@ -3,19 +3,21 @@
 <div style="padding-top: 14px">
   <div style=" width: 700px; float: left">
     <p style="position: relative; left: 30px">Return on Total Assets</p>
-    <div >
-    <canvas baseChart
+    <div style="position: relative; margin: 0 auto;width: 300px; height: 360px">
+    <canvas baseChart width="2" height="2"
             [data]="pieChartData"
             [labels]="lineChartLabels"
-            [chartType]="pieChartType"></canvas>
+            [options]="barChartOptions"
+            [chartType]="pieChartType"
+            [colors]="colors2"></canvas>
     </div>
-    <p style="position: relative; left: 30px">Return on Equity</p>
-    <div >
-      <canvas baseChart
+    <p style="position: relative;  left: 30px">Return on Equity</p>
+    <div style="position: relative; margin: 0 auto;width: 300px; height: 360px">
+      <canvas baseChart width="2" height="2"
               [data]="pieChartEquityData"
               [labels]="lineChartEquityLabels"
+              [options]="barChartOptions"
               [chartType]="pieChartType"
-              [options]="lineChartOptions"
               [colors]="colors"></canvas>
     </div >
   </div>

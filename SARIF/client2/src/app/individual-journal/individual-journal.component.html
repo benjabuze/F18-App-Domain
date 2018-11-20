@@ -12,7 +12,7 @@
 
 
 <div style="padding-top: 20px">
-  <table id="journalTable" style=" table-layout:fixed">
+  <table id="journalTable" style="">
     <thead>
     <tr>
       <th colspan="8" class="col-xs-1 text-center">Individual Journal</th>
@@ -39,9 +39,9 @@
     <table>
       <tr *ngFor="let jaccount of thisJournal.JournalAccounts" style=" background-color: transparent" >
         <td  class="accountslist2" *ngIf="jaccount.NormalSide == 'Credit'" >
-         {{ jaccount.AccountName }}</td>
+          <button class="btn btn-link" (click)="viewLedger(jaccount.AccountName)">{{ jaccount.AccountName }}</button></td>
         <td  class="accountslist" *ngIf="jaccount.NormalSide == 'Debit'">
-          {{ jaccount.AccountName }}
+          <button class="btn btn-link" (click)="viewLedger(jaccount.AccountName)">{{ jaccount.AccountName }}</button>
         </td>
       </tr>
       <tr style=" background-color: transparent">
@@ -58,8 +58,8 @@
 
     <td style="vertical-align: top">{{ thisJournal.Reference }}</td>
 
-    <td style="vertical-align: top">
-      <table  style="vertical-align: top">
+    <td style="vertical-align: top" align="right">
+      <table >
         <tr *ngFor="let jaccount of thisJournal.JournalAccounts; let b = index" style=" background-color: transparent">
           <td class="accountslist"  *ngIf="jaccount.DebitAmount == null"  style="text-align: right;">&nbsp;</td>
           <td class="accountslist"  *ngIf="jaccount.DebitAmount != null && b == 0"  style="text-align:right">{{"$"+(jaccount.DebitAmount | number : '1.2-2')}}</td>
@@ -69,7 +69,7 @@
     </td>
 
     <td style="vertical-align: top">
-      <table  style="vertical-align: top">
+      <table  style="vertical-align: top;" align="right">
         <tr *ngFor="let jaccount of thisJournal.JournalAccounts; let i = index" style=" background-color: transparent;">
           <td class="accountslist"  *ngIf="jaccount.CreditAmount == null"  style="text-align: right;">&nbsp;</td>
           <td class="accountslist"  *ngIf="jaccount.CreditAmount != null && i == getNumberDebits(thisJournal.JournalAccounts)"  style="text-align: right;">{{"$"+(jaccount.CreditAmount | number : '1.2-2')}}</td>

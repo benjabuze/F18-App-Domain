@@ -22,8 +22,18 @@ const httpOptions = {
 })
 export class IndividualJournalComponent implements OnInit {
   documentInfo = '';
+  date: Date;
   fileRetrieve = 'http://localhost:8080/api/retreiveJournalFiles';
-   thisJournal: Journal;
+  thisJournal: Journal = {
+    JId: 0,
+    Date: this.date,
+    Description: '',
+    Reference: '',
+    CreatedBy: '',
+    FileID: 0,
+    JournalAccounts: [],
+    acceptance: '',
+  };
   journals = [];
 
   constructor(
@@ -31,6 +41,7 @@ export class IndividualJournalComponent implements OnInit {
     private data: SharedDataService,
     private router: Router,
     private http: HttpClient,
+
   ) { }
 
   ngOnInit() {
@@ -46,6 +57,7 @@ export class IndividualJournalComponent implements OnInit {
           if(temp == journ.Reference){
             this.thisJournal = journ;
             console.log(this.thisJournal);
+            console.log(this.thisJournal.JournalAccounts[0]);
             break
           }
         }
@@ -93,6 +105,11 @@ export class IndividualJournalComponent implements OnInit {
     this.documentInfo = '';
     let modal = document.getElementById("viewSource");
     modal.style.display = "none";
+  }
+
+  viewLedger(accountName){
+    this.data.setAccount(accountName);
+    this.router.navigate(['UserPage/ledger', accountName]);
   }
 
 }
