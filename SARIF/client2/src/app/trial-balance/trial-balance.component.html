@@ -68,8 +68,10 @@
         <button class="btn btn-link" (click)="viewLedger(account.accountName)">{{account.accountName}}</button>
       </td>
       <td>{{ account.accountNumber }}</td>
-      <td *ngIf="account.normalSide == 'Debit'" style="text-align: right;">{{ account.currentBalance | number : '1.2-2'}}</td>
-      <td *ngIf="account.normalSide == 'Debit'" style="text-align: right;">&nbsp;</td>
+      <td *ngIf="account.normalSide == 'Debit' && b != expensesList.length -1" style="text-align: right;">{{ account.currentBalance | number : '1.2-2'}}</td>
+      <td *ngIf="account.normalSide == 'Debit' && b == expensesList.length -1" style="text-align: right;"><u>{{ account.currentBalance | number : '1.2-2'}}</u></td>
+      <td *ngIf="account.normalSide == 'Debit' && b != expensesList.length -1" style="text-align: right;">&nbsp;</td>
+      <td *ngIf="account.normalSide == 'Debit' && b == expensesList.length -1" style="text-align: right;">{{setUnderline(account.currentBalance)}}</td>
       <td *ngIf="account.normalSide == 'Credit'" style="text-align: right;">&nbsp;</td>
       <td *ngIf="account.normalSide == 'Credit'" style="text-align: right;">{{ account.currentBalance | number : '1.2-2'}}</td>
     </tr>

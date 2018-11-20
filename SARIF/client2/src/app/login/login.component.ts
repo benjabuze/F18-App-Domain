@@ -44,10 +44,15 @@ export class LoginComponent implements OnInit {
         console.log('Login success, userType = ', this.user.userName);
 
         if (this.user.userId > 0) {
-          this.router.navigate(['UserPage']);
           this.logData.create(this.username, 'User successful login').subscribe();
           this.comp.setSession(this.user.userId, this.user.userName, this.user.userRole, this.user.firstName, this.user.lastName);
           this.isActive = 1;
+          if(this.user.userRole == 'admin' || this.user.userRole == 'accountant'){
+            this.router.navigate(['UserPage']);
+          }
+          else{
+            this.router.navigate(['UserPage/journal']);
+          }
         }
         else if(this.user.userId == -2){
           this.isActive = 2;

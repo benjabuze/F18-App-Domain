@@ -162,6 +162,14 @@ export class TrialBalanceComponent implements OnInit {
     this.data.setAccount(accountName);
     this.router.navigate(['UserPage/ledger', accountName]);
   }
+  setUnderline(str: string): string{
+    var str2 = ''
+    for(let i = 0; i< str.length; i++){
+      str2 = str2 + '_';
+    }
+    str2 = str2 + '___';
+    return str2;
+  }
 
   convertPDF(){
     let columns = ['Account', 'Number', 'Debit', 'Credit'];

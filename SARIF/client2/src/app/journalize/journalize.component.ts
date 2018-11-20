@@ -75,8 +75,12 @@ export class JournalizeComponent implements OnInit {
   //current page
   currPage = 1;
   perPage = 5;
+  public date1 =new Date();
+
+  model: any = {date: {year: this.date1.getFullYear(),  day: this.date1.getDate(), month: this.date1.getMonth()}};
 
   myDatePickerOptions: IMyDpOptions = {
+    disableUntil: {year:this.model.date.year, month: this.model.date.month, day: this.model.date.day -1},
     dateFormat: 'mm.dd.yyyy',
     editableDateField: false
   };
@@ -96,7 +100,7 @@ export class JournalizeComponent implements OnInit {
     allowLeadingZeroes: false
   });
 
-  model: any = {date: {year: 2018,  day: 16, month: 11}};
+
 
 
   constructor(
