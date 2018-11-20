@@ -8,16 +8,16 @@
     <tr *ngFor="let log of logs | paginate: { itemsPerPage: perPage, currentPage: currPage }">
 
       <ng-container *ngIf="log.actionType==='Account created' || log.actionType==='Journal created'; else accountUpdated">
-        <td>{{ log.userName }}</td>
-        <td>{{ log.actionType }}</td>
+        <td style="vertical-align: top">{{ log.userName }}</td>
+        <td style="vertical-align: top">{{ log.actionType }}</td>
         <td style="width: 800px">{{'Created: ' + (log.newData) }}</td>
-        <td>{{ log.createdAt | date: 'MM/dd/yyyy HH:mm:ss'}}</td>
+        <td style="vertical-align: top">{{ log.createdAt | date: 'MM/dd/yyyy HH:mm:ss'}}</td>
       </ng-container>
 
       <ng-template #accountUpdated>
         <ng-container *ngIf="log.actionType=='Account updated' || log.actionType== 'User updated'; else anotherElse">
-          <td>{{ log.userName }}</td>
-          <td>{{ log.actionType }}</td>
+          <td style="vertical-align: top">{{ log.userName }}</td>
+          <td style="vertical-align: top">{{ log.actionType }}</td>
           <td>
             <table>
               <tr>
@@ -30,33 +30,33 @@
                 </tr>
               </table>
           </td>
-          <td>{{ log.createdAt | date: 'MM/dd/yyyy HH:mm:ss'}}</td>
+          <td style="vertical-align: top">{{ log.createdAt | date: 'MM/dd/yyyy HH:mm:ss'}}</td>
         </ng-container>
       </ng-template>
 
         <ng-template #anotherElse>
         <ng-container *ngIf="log.actionType=='User created'; else anotherElse2">
-          <td>{{ log.userName }}</td>
-          <td>{{ log.actionType }}</td>
+          <td style="vertical-align: top">{{ log.userName }}</td>
+          <td style="vertical-align: top">{{ log.actionType }}</td>
           <td style="width: 800px">{{'Created: ' + (log.newData) }}</td>
-          <td>{{ log.createdAt | date: 'MM/dd/yyyy HH:mm:ss'}}</td>
+          <td style="vertical-align: top">{{ log.createdAt | date: 'MM/dd/yyyy HH:mm:ss'}}</td>
         </ng-container>
         </ng-template>
 
     <ng-template #anotherElse2>
       <ng-container *ngIf="log.actionType=='Journal approved' || log.actionType=='Journal declined'; else elseIf">
-        <td>{{ log.userName }}</td>
-        <td>{{ log.actionType }}</td>
-        <td style="width: 800px">{{'Journal Reference: ' + (log.newData) }}</td>
-        <td>{{ log.createdAt | date: 'MM/dd/yyyy HH:mm:ss'}}</td>
+        <td style="vertical-align: top">{{ log.userName }}</td>
+        <td style="vertical-align: top">{{ log.actionType }}</td>
+        <td style="width: 800px; vertical-align: top">{{'Journal Reference: ' + (log.newData) }}</td>
+        <td style="vertical-align: top">{{ log.createdAt | date: 'MM/dd/yyyy HH:mm:ss'}}</td>
       </ng-container>
     </ng-template>
 
       <ng-template #elseIf>
-        <td>{{ log.userName }}</td>
-        <td>{{ log.actionType }}</td>
+        <td style="vertical-align: top">{{ log.userName }}</td>
+        <td style="vertical-align: top">{{ log.actionType }}</td>
         <td></td>
-        <td>{{ log.createdAt | date: 'MM/dd/yyyy HH:mm:ss'}}</td>
+        <td style="vertical-align: top">{{ log.createdAt | date: 'MM/dd/yyyy HH:mm:ss'}}</td>
       </ng-template>
     </tr>
   </table>
