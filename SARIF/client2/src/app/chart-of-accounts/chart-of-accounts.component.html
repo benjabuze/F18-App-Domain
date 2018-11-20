@@ -17,7 +17,8 @@
       <div class="form-group">
         <label for="accountNumber">Account Number</label><br>
         <input type="text" class="form-control" id="accountNumber"
-               (ngModelChange)="compareAccountNumberCreate($event)" [textMask]="{mask: currencyMask}" placeholder="Account Number" required [(ngModel)]="CoA.accountNumber"
+               (ngModelChange)="compareAccountNumberCreate($event)" [textMask]="{mask: currencyMask}"
+               placeholder="Account Number" required [(ngModel)]="CoA.accountNumber"
           name="accountNumber" #accountNumbe="ngModel">
       </div>
       <div [hidden]="accountNumbe.valid || accountNumbe.pristine" class="alert alert-danger" style="width: 250px;">
@@ -54,7 +55,8 @@
 
       <div class="form-group">
           <label for="originalBalance">Original Balance</label><br>
-        <input type="text" class="form-control" id="originalBalance" [textMask]="{mask: currencyMask}" placeholder="Account Balance" required [(ngModel)]="CoA.originalBalance"
+        <input type="text" class="form-control" id="originalBalance" [textMask]="{mask: currencyMask}"
+               placeholder="Account Balance" required [(ngModel)]="CoA.originalBalance"
           name="originalBalance" #balance="ngModel">
       </div>
       <div [hidden]="balance.valid || balance.pristine" class="alert alert-danger" style="width: 250px;">
@@ -182,7 +184,8 @@
 <form class="form-inline" style="left: 8px">
   <div style="position:  relative;left: 75%;  padding-top: 20px">
     <div class="form-group">
-      <input type="text" class="form-control" id="searchBar"  style="width: 300px; left: 6px" placeholder="Search" (ngModelChange)="viewAccountsSort(column,'ASC', columnSearch, $event)" required [(ngModel)]="criteria"
+      <input type="text" class="form-control" id="searchBar"  style="width: 300px; left: 6px" placeholder="Search"
+             (ngModelChange)="viewAccountsSort(column,'ASC', columnSearch, $event)" required [(ngModel)]="criteria"
              name="search" >
     </div>
   </div>

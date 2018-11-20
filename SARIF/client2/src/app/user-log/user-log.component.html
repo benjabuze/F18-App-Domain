@@ -7,7 +7,7 @@
       <th>Time</th>
     <tr *ngFor="let log of logs | paginate: { itemsPerPage: perPage, currentPage: currPage }">
 
-      <ng-container *ngIf="log.actionType==='Account created'; else accountUpdated">
+      <ng-container *ngIf="log.actionType==='Account created' || log.actionType==='Journal created'; else accountUpdated">
         <td>{{ log.userName }}</td>
         <td>{{ log.actionType }}</td>
         <td style="width: 800px">{{'Created: ' + (log.newData) }}</td>
@@ -35,7 +35,7 @@
       </ng-template>
 
         <ng-template #anotherElse>
-        <ng-container *ngIf="log.actionType=='User created'; else elseIf">
+        <ng-container *ngIf="log.actionType=='User created'; else anotherElse2">
           <td>{{ log.userName }}</td>
           <td>{{ log.actionType }}</td>
           <td style="width: 800px">{{'Created: ' + (log.newData) }}</td>
@@ -43,10 +43,19 @@
         </ng-container>
         </ng-template>
 
+    <ng-template #anotherElse2>
+      <ng-container *ngIf="log.actionType=='Journal approved' || log.actionType=='Journal declined'; else elseIf">
+        <td>{{ log.userName }}</td>
+        <td>{{ log.actionType }}</td>
+        <td style="width: 800px">{{'Journal Reference: ' + (log.newData) }}</td>
+        <td>{{ log.createdAt | date: 'MM/dd/yyyy HH:mm:ss'}}</td>
+      </ng-container>
+    </ng-template>
+
       <ng-template #elseIf>
         <td>{{ log.userName }}</td>
         <td>{{ log.actionType }}</td>
-        <td>...</td>
+        <td></td>
         <td>{{ log.createdAt | date: 'MM/dd/yyyy HH:mm:ss'}}</td>
       </ng-template>
     </tr>

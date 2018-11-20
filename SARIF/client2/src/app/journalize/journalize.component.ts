@@ -16,6 +16,7 @@ import {HttpClient, HttpHeaders} from '@angular/common/http';
 import { Router } from '@angular/router';
 import {SharedDataService } from '../services/shared-data.service';
 import createNumberMask from 'text-mask-addons/dist/createNumberMask';
+import {UserLogService} from '../services/user-log.service';
 
 const httpOptions = {
   headers: new HttpHeaders({
@@ -110,7 +111,8 @@ export class JournalizeComponent implements OnInit {
     private ledgerServ: GeneralLedgerService,
     private comp: AppComponent,
     private http: HttpClient,
-    private data: SharedDataService
+    private data: SharedDataService,
+    private logData: UserLogService,
   ) {
   }
 
@@ -391,6 +393,7 @@ export class JournalizeComponent implements OnInit {
       }
 
       let id: number;
+      var newDataString;
       //sets the input date
       this.journalNew.Date = new Date();
       this.journalNew.Date.setFullYear(this.model.date.year, this.model.date.month - 1, this.model.date.day);
@@ -400,6 +403,18 @@ export class JournalizeComponent implements OnInit {
       console.log(this.journalNew.Date);
       //sending prinmary journal data
       let response = await this.journalServ.addJournal(this.journalNew).toPromise();
+
+      newDataString = this.journalNew.Reference +', ' +this.journalNew.Date+ ', '+ 'pending';
+
+      for(let debitAccounts of this.journalAccountsDebit) {
+        newDataString = newDataString + ', Account: [' + debitAccounts.AccountName + ', ' + debitAccounts.DebitAmount +']';
+      }
+      for(let creditAccounts of this.journalAccountsCredit){
+        newDataString =newDataString + ', Account: [' + creditAccounts.AccountName + ', ' + creditAccounts.CreditAmount + ']';
+      }
+
+
+      this.logData.updateAccountLog(this.comp.getUserName(), 'Journal created', null, newDataString).subscribe();
       id = response.JId;
       console.log("id: " + id);
       //post the debit accounts
@@ -450,7 +465,7 @@ export class JournalizeComponent implements OnInit {
   }
 
   //create a random set of characters for reference
-  makeRandomRef() {
+  makeRandomRef(){
     let text = "";
     let poss = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
 
@@ -512,6 +527,7 @@ export class JournalizeComponent implements OnInit {
         }
       }
     }
+    var newDataString;
     journal.acceptance = 'Approved';
     let journaltemp = new Journal();
     journaltemp.JId = journal.JId;
@@ -524,10 +540,13 @@ export class JournalizeComponent implements OnInit {
     this.journalServ.updateJournal(journaltemp).subscribe((result) => {
       console.log(result);
     });
+    newDataString = journal.Reference;
+    this.logData.updateAccountLog(this.comp.getUserName(), 'Journal approved', null, newDataString).subscribe();
 
   }
 
   async declineJournal(journal) {
+    var newDataString;
     journal.acceptance = 'Declined';
     let journaltemp = new Journal();
     journaltemp.JId = journal.JId;
@@ -540,6 +559,8 @@ export class JournalizeComponent implements OnInit {
     this.journalServ.updateJournal(journaltemp).subscribe((result) => {
       console.log(result);
     });
+    newDataString = journal.Reference;
+    this.logData.updateAccountLog(this.comp.getUserName(), 'Journal declined', null, newDataString).subscribe();
 
   }
 
