@@ -85,7 +85,7 @@ export class JournalizeComponent implements OnInit {
     editableDateField: false
   };
 
-  private currencyMask = createNumberMask({
+  public currencyMask = createNumberMask({
     prefix: '',
     suffix: '',
     includeThousandsSeparator: false,

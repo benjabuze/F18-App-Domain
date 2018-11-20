@@ -163,6 +163,7 @@ export class AddUserComponent implements OnInit {
 
   //submit new user
   submit(): void {
+    var newDataString;
     if(this.passwordAcceptable != 1){
       this.passwordError = 1;
     } else if (this.usernameExist !== 1 || this.emailExist !==1 ){
@@ -171,6 +172,10 @@ export class AddUserComponent implements OnInit {
       this.user.lastUpdatePassword = new Date();
       this.user.passwordExpire = new Date();
       this.user.passwordExpire.setDate(this.user.lastUpdatePassword.getDate() + 28)
+
+      newDataString = this.user.userName + ', ' + this.user.firstName + ', ' + this.user.lastName + ', ' + this.user.userPassword
+        + ', ' + this.user.email + ', ' + this.user.userRole + ', ' + this.user.active + ', ' +this.user.securityQ + ', ' + this.user.securityA;
+
       this.userData.addUser(this.user)
         .subscribe(() => {
           this.viewUsersSort(this.column,'ASC', this.columnSearch, this.criteria);
@@ -179,10 +184,12 @@ export class AddUserComponent implements OnInit {
 
 
         });
+      this.logData.updateAccountLog(this.comp.getUserName(), 'User created', null, newDataString).subscribe();
     }
   }
 //submit an edit
   async submitEdit(){
+    var prevDataString, newDataString;
     //conditions for input data
     if (this.passwordAcceptable !== 1){
       console.log("no1");
@@ -207,6 +214,13 @@ export class AddUserComponent implements OnInit {
         this.user2.active = 0;
       }
       this.user2.userId = this.userInfo2.userId;
+
+      prevDataString = this.userInfo2.userName + ', ' + this.userInfo2.firstName + ', ' + this.userInfo2.lastName + ', ' + this.userInfo2.userPassword
+      + ', ' + this.userInfo2.email + ', ' + this.userInfo2.userRole + ', ' + this.active + ', ' +this.userInfo2.securityQ + ', ' + this.userInfo2.securityA;
+      newDataString = this.user2.userName + ', ' + this.user2.firstName + ', ' + this.user2.lastName + ', ' + this.user2.userPassword
+        + ', ' + this.user2.email + ', ' + this.user2.userRole + ', ' + this.user2.active + ', ' +this.user2.securityQ + ', ' + this.user2.securityA;
+
+
       this.userData.updateUser(this.user2)
         .subscribe(() => {
           this.viewUsersSort(this.column,'ASC', this.columnSearch, this.criteria);
@@ -214,6 +228,7 @@ export class AddUserComponent implements OnInit {
           this.passwordError = 0;
           this.passwordAcceptable = 1;
         });
+      this.logData.updateAccountLog(this.comp.getUserName(), 'User updated', prevDataString, newDataString).subscribe();
     }
   }
 //check if password is appropriate

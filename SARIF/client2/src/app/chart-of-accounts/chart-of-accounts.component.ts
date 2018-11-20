@@ -121,6 +121,7 @@ export class ChartOfAccountsComponent implements OnInit {
   }
 
   submit() {
+    var newDataString;
     this.CoA.createdBy = this.comp.getUserName();
     //Check to see if account number is a number
 
@@ -146,16 +147,20 @@ export class ChartOfAccountsComponent implements OnInit {
           //If account name and number not found, create the account
           this.CoA.accountName = this.CoA.accountName.charAt(0).toLocaleUpperCase() + this.CoA.accountName.substr(1);
           this.CoA.accountName = this.CoA.accountName.replace(/^\s+|\s+$/g, "");
+
+      newDataString = this.CoA.accountNumber + ', ' + this.CoA.accountName + ', ' + this.CoA.accountType + ', ' +
+        this.CoA.accountSubType + ', ' + this.CoA.normalSide + ', ' + this.CoA.originalBalance + ', ' + this.CoA.currentBalance +
+        ', '+ this.CoA.comment + ', '+ this.CoA.active;
           this.coaService.addAccount(this.CoA)
             .subscribe(() => {
-              let accountDataString = JSON.stringify(this.CoA);
-              this.logData.createAccountLog(this.comp.getUserName(), "Account created", accountDataString).subscribe();
               //Close modal
               let modal = document.getElementById("createAccountModal");
               modal.style.display = "none";
               this.accountForm.reset();
               this.viewAccountsSort(this.column, 'ASC', this.columnSearch, this.criteria);
             });
+          console.log(newDataString);
+          this.logData.updateAccountLog(this.comp.getUserName(), 'Account created', null, newDataString).subscribe();
         }
   }
 
@@ -186,14 +191,15 @@ export class ChartOfAccountsComponent implements OnInit {
     modal.style.display = "block";
   }
 
-  submitEdit() {
+  async submitEdit() {
     var prevDataString = "";
-    this.coaService.getByName(this.editCoA.accountName)
-    .subscribe((account) => {
-      this.prevData = account;
-      prevDataString = JSON.stringify(account);
-    })
-    console.log(this.prevData);
+    await this.getOriginalAccountID(this.editCoA.caId);
+    prevDataString = this.accountCheck.accountNumber + ', ' + this.accountCheck.accountName + ', ' + this.accountCheck.accountType + ', ' +
+      this.accountCheck.accountSubType + ', ' + this.accountCheck.normalSide + ', ' + this.accountCheck.originalBalance + ', ' + this.accountCheck.currentBalance +
+      ', '+ this.accountCheck.comment + ', '+ this.accountCheck.active
+
+
+    console.log(prevDataString);
     
     if ((this.editCoA.accountNumber != null) && isNaN(this.editCoA.accountNumber)) {
       return window.alert("Enter a number for account number");
@@ -229,7 +235,9 @@ export class ChartOfAccountsComponent implements OnInit {
       console.log('edit made');
       this.coaService.updateAccount(this.editCoA)
         .subscribe(() => {
-          var newDataString = JSON.stringify(this.editCoA);
+          var newDataString = this.editCoA.accountNumber + ', ' + this.editCoA.accountName + ', ' + this.editCoA.accountType + ', ' +
+            this.editCoA.accountSubType + ', ' + this.editCoA.normalSide + ', ' + this.editCoA.originalBalance + ', ' + this.editCoA.currentBalance +
+            ', '+ this.editCoA.comment + ', '+ this.editCoA.active;
           this.logData.updateAccountLog(this.comp.getUserName(), 'Account updated', prevDataString, newDataString).subscribe();
           let modal = document.getElementById("editAccountModal");
           modal.style.display = "none";

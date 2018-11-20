@@ -5,39 +5,65 @@
       <th>Action Type</th>
       <th>Description</th>
       <th>Time</th>
-    <tr *ngFor="let log of logs">
+    <tr *ngFor="let log of logs | paginate: { itemsPerPage: perPage, currentPage: currPage }">
+
       <ng-container *ngIf="log.actionType==='Account created'; else accountUpdated">
         <td>{{ log.userName }}</td>
         <td>{{ log.actionType }}</td>
-        <td>
-        </td>
+        <td style="width: 800px">{{'Created: ' + (log.newData) }}</td>
         <td>{{ log.createdAt | date: 'MM/dd/yyyy HH:mm:ss'}}</td>
       </ng-container>
+
       <ng-template #accountUpdated>
-        <ng-container *ngIf="log.actionType=='Account updated'; else elseIf">
+        <ng-container *ngIf="log.actionType=='Account updated' || log.actionType== 'User updated'; else anotherElse">
           <td>{{ log.userName }}</td>
           <td>{{ log.actionType }}</td>
           <td>
             <table>
               <tr>
-                <td style="width: 200px">{{'Before: ' + (log.prevData) }}</td>
+                <td class="report" style="width: 800px">{{'Before: ' + (log.prevData) }}</td>
               </tr>
             </table>
             <table>
                 <tr>
-                  <td style="width: 200px">{{'After: ' + (log.newData) }}</td>
+                  <td class="report" style="width: 800px">{{'After: ' + (log.newData) }}</td>
                 </tr>
               </table>
           </td>
           <td>{{ log.createdAt | date: 'MM/dd/yyyy HH:mm:ss'}}</td>
         </ng-container>
       </ng-template>
+
+        <ng-template #anotherElse>
+        <ng-container *ngIf="log.actionType=='User created'; else elseIf">
+          <td>{{ log.userName }}</td>
+          <td>{{ log.actionType }}</td>
+          <td style="width: 800px">{{'Created: ' + (log.newData) }}</td>
+          <td>{{ log.createdAt | date: 'MM/dd/yyyy HH:mm:ss'}}</td>
+        </ng-container>
+        </ng-template>
+
       <ng-template #elseIf>
         <td>{{ log.userName }}</td>
         <td>{{ log.actionType }}</td>
-        <td></td>
+        <td>...</td>
         <td>{{ log.createdAt | date: 'MM/dd/yyyy HH:mm:ss'}}</td>
       </ng-template>
     </tr>
   </table>
+  <div style="display: inline-block">
+    <div style="float: left; width: 100px; position: relative; left: 5px; top: 3px">
+      <p style="color: black">{{"Per Page:"}}</p>
+    </div>
+    <select id="perPage" class="form-control" style="position:relative; float: left; width: 75px; right: 20px"
+            [(ngModel)]="perPage"
+            name="account">
+      <option>5</option>
+      <option selected>10</option>
+      <option>15</option>
+      <option>20</option>
+    </select>
+
+    <pagination-controls style="float: left" (pageChange)="currPage = $event"></pagination-controls>
+  </div>
 </div>

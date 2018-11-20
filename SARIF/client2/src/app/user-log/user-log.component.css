@@ -17,5 +17,8 @@ table, h3, h2, td {
 #logTable {
   font-family: arial, sans-serif;
   border-collapse: collapse;
-  width: 40%;
+}
+
+.report {
+  border: none;
 }

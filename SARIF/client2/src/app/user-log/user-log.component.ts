@@ -13,6 +13,8 @@ export class UserLogComponent implements OnInit {
   logs = [];
   newAccountData = new CoA();
   oldAccountData = new CoA();
+  currPage = 1;
+  perPage = 10;
 
   constructor(
     private logData: UserLogService,
@@ -26,7 +28,6 @@ export class UserLogComponent implements OnInit {
     this.logData.findAll().subscribe(
       (userLog) => {
         this.logs = userLog;
-        this.getAccount(userLog);
       }
     );
   }

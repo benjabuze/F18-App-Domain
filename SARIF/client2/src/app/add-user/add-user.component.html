@@ -40,9 +40,6 @@
             <option>manager</option>
             <option>admin</option>
           </select>
-          <label for="userName">User Name</label>
-          <input type="text" class="form-control" id="userName2" (ngModelChange)="compareUserName($event)" placeholder="User Name" required [(ngModel)]="user.userName"
-                 name="userName" >
         </div>
 
         <div class="form-group">
@@ -83,7 +80,7 @@
                  name="lastName">
         </div>
 
-        <div class="form-group" style="margin-top:258px;">
+        <div class="form-group" style="margin-top:188px;">
           <label for="answer">Answer</label>
           <input type="text" class="form-control" id="answer" placeholder="Answer" required [(ngModel)]="user.securityA"
                  name="password3" >

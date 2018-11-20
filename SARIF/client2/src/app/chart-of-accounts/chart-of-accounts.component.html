@@ -17,7 +17,7 @@
       <div class="form-group">
         <label for="accountNumber">Account Number</label><br>
         <input type="text" class="form-control" id="accountNumber"
-               (ngModelChange)="compareAccountNumberCreate($event)" placeholder="Account Number" required [(ngModel)]="CoA.accountNumber"
+               (ngModelChange)="compareAccountNumberCreate($event)" [textMask]="{mask: currencyMask}" placeholder="Account Number" required [(ngModel)]="CoA.accountNumber"
           name="accountNumber" #accountNumbe="ngModel">
       </div>
       <div [hidden]="accountNumbe.valid || accountNumbe.pristine" class="alert alert-danger" style="width: 250px;">
