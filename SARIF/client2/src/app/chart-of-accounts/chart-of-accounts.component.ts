@@ -157,7 +157,7 @@ export class ChartOfAccountsComponent implements OnInit {
               let modal = document.getElementById("createAccountModal");
               modal.style.display = "none";
               this.accountForm.reset();
-              this.viewAccountsSort(this.column, 'ASC', this.columnSearch, this.criteria);
+              this.viewAccountsSort(this.column, 'DESC', this.columnSearch, this.criteria);
             });
           console.log(newDataString);
           this.logData.updateAccountLog(this.comp.getUserName(), 'Account created', null, newDataString).subscribe();

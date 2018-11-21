@@ -52,7 +52,7 @@ exports.findAllSort = (req, res) => {
     let criteria = req.body.criteria;
     let approvalType = req.body.approvalType;
     //if search is set to all and there is criteria input
-    if(columnSearch == 'all' && (criteria!= '' && criteria != null) && approvalType != 'all') {
+    if(columnSearch === 'all' && (criteria!== '' && criteria != null) && approvalType !== 'all') {
         //if a search is entered
         Journal.findAll({
                 where: {
@@ -77,7 +77,7 @@ exports.findAllSort = (req, res) => {
         }
         );
     }
-    else if(columnSearch == 'all' && (criteria != '' && criteria != null) && approvalType == 'all'){
+    else if(columnSearch === 'all' && (criteria !== '' && criteria != null) && approvalType === 'all'){
         Journal.findAll({
                 where: {
                     [Op.or]: [{Description: {[Op.like]: '%'+ criteria + '%'}},
@@ -105,7 +105,7 @@ exports.findAllSort = (req, res) => {
         );
 
     }
-    else if( columnSearch == 'all' &&  criteria == '' && approvalType != 'all'){
+    else if( columnSearch === 'all' &&  criteria === '' && approvalType !== 'all'){
         Journal.findAll({
                 where: {
 
@@ -128,6 +128,8 @@ exports.findAllSort = (req, res) => {
     else{
         //if search wasnt entered
         Journal.findAll({
+            order: [[column, direction],
+            [JournalAccounts, 'NormalSide', 'DESC']],
             include:[
                 {
                     model: JournalAccounts

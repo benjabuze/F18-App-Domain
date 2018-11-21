@@ -456,9 +456,7 @@ export class JournalizeComponent implements OnInit {
       console.log(this.journalAccountsCredit);
       //sending source file
 
-
-      this.viewJournals();
-      console.log(response);
+      this.viewJournalsSort('JId', 'DESC', 'all', '', this.approvalType);
       this.close();
       this.openConfirmationPopup();
     }

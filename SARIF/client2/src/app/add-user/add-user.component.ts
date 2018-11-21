@@ -178,7 +178,7 @@ export class AddUserComponent implements OnInit {
 
       this.userData.addUser(this.user)
         .subscribe(() => {
-          this.viewUsersSort(this.column,'ASC', this.columnSearch, this.criteria);
+          this.viewUsersSort(this.column,'DESC', this.columnSearch, this.criteria);
           this.close();
           this.userForm.reset();
 
