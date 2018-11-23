@@ -31,6 +31,7 @@ export class IndividualJournalComponent implements OnInit {
     Reference: '',
     CreatedBy: '',
     FileID: 0,
+    Type: '',
     JournalAccounts: [],
     acceptance: '',
   };

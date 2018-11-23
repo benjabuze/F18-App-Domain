@@ -226,10 +226,11 @@ export class BalanceSheetComponent implements OnInit {
     rows.push(['Total Liabilites & Stockholders Equity', ' ', num3]);
 
     doc.setFontSize(12);
-    doc.text(240, 40, 'Balance Sheet');
-    doc.text(240, 60, 'At ' +this.currentDate.getMonth() +'/'+ this.currentDate.getDate() +'/'+ this.currentDate.getFullYear());
+    doc.text(240, 40, 'Sarif Financial');
+    doc.text(240, 60, 'Balance Sheet');
+    doc.text(240, 80, 'At ' +this.currentDate.getMonth() +'/'+ this.currentDate.getDate() +'/'+ this.currentDate.getFullYear());
 
-    doc.autoTable(columns, rows, {startY: 68, columnStyles: {
+    doc.autoTable(columns, rows, {startY: 88, columnStyles: {
         0: {columnWidth: 350}, 1: {halign: 'right'}, 2: {halign: 'right'}, }});
     doc.save('Balance Sheet.pdf');
   }

@@ -36,7 +36,9 @@
 
           <div>
             <label>Account Type</label>
-            <select id="selectType" class="form-control" style="width: 200px">
+            <select id="selectType" class="form-control"
+                    [(ngModel)]="journalNew.Type" style="width: 200px"
+            name="newselect">
               <option selected>Normal</option>
               <option>Adjusting</option>
               <option>Post-Closing</option>
@@ -202,14 +204,10 @@
 
     <tr *ngFor="let journal of journals | paginate: { itemsPerPage: perPage, currentPage: currPage }">
       <td style="vertical-align: top"  >{{ journal.Date | date: 'MM/dd/yyyy'}}</td>
-      <td style="vertical-align: top">
-        <table>
-        <tr *ngFor="let jaccount of journal.JournalAccounts" style=" background-color: transparent">
-         <td class="accountslist2" >{{jaccount.Type}}
+
+         <td style="vertical-align: top" >{{journal.Type}}
          </td>
-        </tr>
-      </table>
-      </td>
+
       <td style="vertical-align: top" >{{ journal.CreatedBy }}</td>
       <td>
        <table>

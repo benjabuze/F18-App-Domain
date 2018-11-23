@@ -119,6 +119,7 @@ export class JournalizeComponent implements OnInit {
   ngOnInit() {
     this.journals = [];
     this.journals.length = 0;
+    this.journalNew.Type = 'Normal';
     this.onOpened();
     this.getAccounts();
     //this.viewJournals();
@@ -400,6 +401,9 @@ export class JournalizeComponent implements OnInit {
       this.journalNew.CreatedBy = this.comp.getUserName();
       this.journalNew.Reference = this.makeRandomRef();
       this.journalNew.FileID = fileID;
+      if(this.journalNew.Type == null || this.journalNew.Type == undefined){
+        this.journalNew.Type = 'Normal';
+      }
       console.log(this.journalNew.Date);
       //sending prinmary journal data
       let response = await this.journalServ.addJournal(this.journalNew).toPromise();
