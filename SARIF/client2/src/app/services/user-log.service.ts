@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import {User} from '../user';
 
 const httpOptions = {
   headers: new HttpHeaders({ 
@@ -16,6 +17,7 @@ const httpOptions = {
 })
 export class UserLogService {
   private log = 'http://localhost:8080/api/log';
+  private logSort = 'http://localhost:8080/api/logSort';
   constructor(
     private http: HttpClient
   ) { }
@@ -35,6 +37,11 @@ export class UserLogService {
 
   findAll(): Observable<any> {
     return this.http.get(this.log, httpOptions);
+  }
+
+  findAllSort(column, direction, columnSearch, criteria): Observable<any> {
+    return this.http.post<any>(this.logSort, {column: column, direction: direction, columnSearch: columnSearch,
+      criteria: criteria}, httpOptions);
   }
 
   findByType(actionType: string): Observable<any> {

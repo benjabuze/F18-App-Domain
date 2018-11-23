@@ -1,4 +1,11 @@
-<div>
+
+<div style="position:  relative;left: 58%;  padding-top: 20px">
+  <div class="form-group">
+    <input type="text" class="form-control" id="searchBar"  style="width: 300px; left: 6px" placeholder="Search" (ngModelChange)="viewLogSort(column,'ASC', columnSearch, $event)" required [(ngModel)]="criteria"
+           name="search" >
+  </div>
+</div>
+<div style="margin: auto; width: 50%;">
   <table id="logTable" >
     <tr>
       <th>Username</th>
