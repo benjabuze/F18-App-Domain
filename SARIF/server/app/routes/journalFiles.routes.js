@@ -33,7 +33,7 @@ module.exports = function(app) {
             console.log("no file received");
         }
         else{
-            var fileData = fs.readFileSync('../server/uploads/' + req.file.filename);
+            var fileData = fs.readFileSync('./uploads/' + req.file.filename);
             console.log(req.file.filename);
             uploadFiles.create({
                 FileData: fileData,
