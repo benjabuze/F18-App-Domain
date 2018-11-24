@@ -3,12 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="5a35810b-c502-4cf4-92da-b312b7cf1f49" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/client/3rdpartylicenses.txt" beforeDir="false" afterPath="$PROJECT_DIR$/dist/client/3rdpartylicenses.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/client/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/client/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/client/main.ba01bfb316d7f08de562.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/client/polyfills.2256b25399f331283874.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/client/scripts.d619d19e3f41e9a16958.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/individual-journal/individual-journal.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/individual-journal/individual-journal.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/services/journalize.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/services/journalize.service.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../server/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../server/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../server/app/routes/journalFiles.routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/../server/app/routes/journalFiles.routes.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../server/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/../server/server.js" afterDir="false" />
@@ -241,19 +239,19 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="css" value="9" />
-          <entry key="html" value="21" />
+          <entry key="html" value="22" />
           <entry key="js" value="1" />
           <entry key="json" value="1" />
-          <entry key="ts" value="39" />
+          <entry key="ts" value="41" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CSS" value="9" />
-          <entry key="HTML" value="21" />
+          <entry key="HTML" value="22" />
           <entry key="JSON" value="1" />
           <entry key="JavaScript" value="1" />
-          <entry key="TypeScript" value="39" />
+          <entry key="TypeScript" value="41" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
@@ -261,7 +259,7 @@
           <entry key="css" value="76" />
           <entry key="html" value="1078" />
           <entry key="json" value="57" />
-          <entry key="ts" value="1454" />
+          <entry key="ts" value="1610" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
@@ -269,7 +267,7 @@
           <entry key="CSS" value="76" />
           <entry key="HTML" value="1078" />
           <entry key="JSON" value="57" />
-          <entry key="TypeScript" value="1454" />
+          <entry key="TypeScript" value="1610" />
         </counts>
       </usages-collector>
     </session>
@@ -292,25 +290,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/app/individual-journal/individual-journal.component.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-921">
-              <caret line="33" column="13" selection-start-line="33" selection-start-column="13" selection-end-line="33" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/app/trial-balance/trial-balance.component.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1088">
-              <caret line="64" column="9" selection-start-line="64" selection-start-column="9" selection-end-line="64" selection-end-column="9" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/app/login-home/login-home.component.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
+            <state relative-caret-position="99">
+              <caret line="75" lean-forward="true" selection-start-line="75" selection-end-line="75" />
               <folding>
                 <element signature="e#0#50#0" expanded="true" />
               </folding>
@@ -319,15 +300,36 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/app/add-user/add-user.component.html">
+        <entry file="file://$PROJECT_DIR$/src/app/services/journalize.service.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4233">
-              <caret line="249" column="11" selection-start-line="247" selection-start-column="1" selection-end-line="252" selection-end-column="8" />
+            <state relative-caret-position="235">
+              <caret line="65" column="3" lean-forward="true" selection-start-line="65" selection-start-column="3" selection-end-line="65" selection-end-column="3" />
               <folding>
-                <element signature="n#style#0;n#input#0;n#div#0;n#form#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#2;n#div#1;n#form#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#2;n#div#1;n#form#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#form#0;n#!!top" expanded="true" />
+                <element signature="e#0#43#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/app/services/user-log.service.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="132">
+              <caret line="25" selection-start-line="25" selection-end-line="25" />
+              <folding>
+                <element signature="e#0#43#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/app/individual-journal/individual-journal.component.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-153">
+              <caret line="3" column="40" selection-start-line="3" selection-start-column="40" selection-end-line="3" selection-end-column="40" />
+              <folding>
+                <element signature="n#style#0;n#td#1;n#tr#0;n#table#0;n#div#1;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -435,7 +437,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/styles.css" />
         <option value="$PROJECT_DIR$/src/app/home-screen/home-screen.component.css" />
         <option value="$PROJECT_DIR$/src/app/add-user-login/add-user-login.component.css" />
         <option value="$PROJECT_DIR$/src/app/general-ledger/general-ledger.component.css" />
@@ -473,7 +474,6 @@
         <option value="$PROJECT_DIR$/src/app/add-user/add-user.component.ts" />
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/src/app/journal.ts" />
-        <option value="$PROJECT_DIR$/src/app/individual-journal/individual-journal.component.ts" />
         <option value="$PROJECT_DIR$/src/app/journalize/journalize.component.ts" />
         <option value="$PROJECT_DIR$/src/app/journalize/journalize.component.html" />
         <option value="$PROJECT_DIR$/src/app/individual-journal/individual-journal.component.html" />
@@ -486,6 +486,8 @@
         <option value="$PROJECT_DIR$/src/app/user-page/user-page.component.css" />
         <option value="$PROJECT_DIR$/src/app/user-page/user-page.component.html" />
         <option value="$PROJECT_DIR$/src/app/user-log/user-log.component.html" />
+        <option value="$PROJECT_DIR$/src/app/services/journalize.service.ts" />
+        <option value="$PROJECT_DIR$/src/app/individual-journal/individual-journal.component.ts" />
       </list>
     </option>
   </component>
@@ -509,9 +511,9 @@
       <path value="$PROJECT_DIR$/package.json" />
     </packageJsonPaths>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="262" />
-    <option name="y" value="81" />
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="364" />
+    <option name="y" value="36" />
     <option name="width" value="1535" />
     <option name="height" value="930" />
   </component>
@@ -565,6 +567,13 @@
               <item name="client2" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="services" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="client2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="client2" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="trial-balance" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -592,7 +601,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542955183110" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543081216342" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.tslint" value="project" />
@@ -687,15 +696,15 @@
       <workItem from="1542763610329" duration="5057000" />
       <workItem from="1542771467420" duration="13000" />
       <workItem from="1542939470187" duration="7109000" />
-      <workItem from="1543027112047" duration="285000" />
+      <workItem from="1543027112047" duration="3012000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="511302000" />
+    <option name="totallyTimeSpent" value="514029000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23987207" />
@@ -872,11 +881,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2533">
           <caret line="156" column="72" selection-start-line="156" selection-start-column="72" selection-end-line="156" selection-end-column="72" />
+          <folding>
+            <element signature="e#0#61#0" expanded="true" />
+          </folding>
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/services/journalize.service.ts">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/app/chart-of-accounts/chart-of-accounts.component.html">
       <provider selected="true" editor-type-id="text-editor">
@@ -934,16 +943,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/individual-journal/individual-journal.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="40" lean-forward="true" selection-start-line="3" selection-start-column="40" selection-end-line="3" selection-end-column="40" />
-          <folding>
-            <element signature="n#style#0;n#td#1;n#tr#0;n#table#0;n#div#1;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/app/balance-sheet/balance-sheet.component.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="404">
@@ -983,16 +982,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
           <caret line="32" column="15" selection-start-line="31" selection-start-column="2" selection-end-line="34" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/services/user-log.service.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
-          <folding>
-            <element signature="e#0#43#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1085,10 +1074,43 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/individual-journal/individual-journal.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-153">
+          <caret line="3" column="40" selection-start-line="3" selection-start-column="40" selection-end-line="3" selection-end-column="40" />
+          <folding>
+            <element signature="n#style#0;n#td#1;n#tr#0;n#table#0;n#div#1;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/services/user-log.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="25" selection-start-line="25" selection-end-line="25" />
+          <folding>
+            <element signature="e#0#43#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/services/journalize.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="235">
+          <caret line="65" column="3" lean-forward="true" selection-start-line="65" selection-start-column="3" selection-end-line="65" selection-end-column="3" />
+          <folding>
+            <element signature="e#0#43#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/app/individual-journal/individual-journal.component.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-921">
-          <caret line="33" column="13" selection-start-line="33" selection-start-column="13" selection-end-line="33" selection-end-column="13" />
+        <state relative-caret-position="99">
+          <caret line="75" lean-forward="true" selection-start-line="75" selection-end-line="75" />
+          <folding>
+            <element signature="e#0#50#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

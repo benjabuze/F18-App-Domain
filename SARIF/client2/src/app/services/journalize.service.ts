@@ -23,6 +23,7 @@ export class JournalizeService {
   private journalUrl = 'http://localhost:8080/api/journal';
   private journalSort = 'http://localhost:8080/api/journalSort';
   private journalAccountUrl = 'http://localhost:8080/api/journalAccount';
+  private fileRetrieve = 'http://localhost:8080/api/retreiveJournalFiles';
 
   //'/api/journal'
   //'/api/journalAccount'
@@ -66,6 +67,15 @@ export class JournalizeService {
   updateJournalAccounts(journalAccount): Observable<any> {
     const body = JSON.stringify(journalAccount);
     return this.http.put(this.journalAccountUrl, body, httpOptions);
+  }
+
+  public downloadReport(event: number): Observable<any> {
+    // Create url
+
+    return this.http.post(this.fileRetrieve, {jID: event}, {
+      responseType: "blob",
+      headers: new HttpHeaders().append("Content-Type", "application/json")
+    });
   }
 
 }

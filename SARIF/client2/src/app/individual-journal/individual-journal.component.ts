@@ -5,6 +5,7 @@ import { Journal } from '../journal';
 import {JournalAccount} from '../journalAccount';
 import {Router} from '@angular/router';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
+import saveAs from 'file-saver';
 
 const httpOptions = {
   headers: new HttpHeaders({
@@ -36,6 +37,8 @@ export class IndividualJournalComponent implements OnInit {
     acceptance: '',
   };
   journals = [];
+
+
 
   constructor(
     private journalServ: JournalizeService,
@@ -84,9 +87,18 @@ export class IndividualJournalComponent implements OnInit {
   }
 
   getJournalFile(event: number){
-    this.http.post<any>(this.fileRetrieve, {jID: event}, httpOptions).subscribe( result => {
-      console.log(result.FileData.data);
-      var res = result.FileData.data;
+    //this.http.post<any>(this.fileRetrieve, {jID: event}, httpOptions).subscribe( result => {
+      //var newBlob = new Blob([result.data], { type: "application/pdf"});
+
+      this.journalServ.downloadReport(event).subscribe(data => {
+        console.log(data);
+        saveAs(data, 'Balance Sheet (1).pdf');
+      });
+
+
+       /*
+      console.log(result.data);
+      var res = result.data;
       for(let r of res){
         if(r == 10){
           this.documentInfo = this.documentInfo + '\n';
@@ -101,6 +113,7 @@ export class IndividualJournalComponent implements OnInit {
     });
     var modal = document.getElementById('viewSource');
     modal.style.display = "block";
+    */
   }
   closeFile() {
     this.documentInfo = '';
