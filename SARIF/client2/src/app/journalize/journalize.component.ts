@@ -71,6 +71,9 @@ export class JournalizeComponent implements OnInit {
   repeatDebitAccount = 1;
   repeatCreditAccount = 1;
 
+  //type of confirmation
+  confirmationType = '';
+
   //user access
   access = 0;
 
@@ -296,6 +299,8 @@ export class JournalizeComponent implements OnInit {
     modal.style.display = "none";
     this.journalForm.reset();
     this.selectedFile = null;
+    this.model = {date: {year: this.date1.getFullYear(),  day: this.date1.getDate(), month: this.date1.getMonth()}};
+    this.journalNew.Type = 'Normal';
     this.repeatDebitAccount = 1;
     this.repeatCreditAccount = 1;
     this.myInputVariable.nativeElement.value = "";
@@ -464,7 +469,7 @@ export class JournalizeComponent implements OnInit {
 
       this.viewJournalsSort('JId', 'DESC', 'all', '', this.approvalType);
       this.close();
-      this.openConfirmationPopup();
+      this.openConfirmationPopup('Your Journal entry has been added');
     }
   }
 
@@ -546,6 +551,7 @@ export class JournalizeComponent implements OnInit {
     });
     newDataString = journal.Reference;
     this.logData.updateAccountLog(this.comp.getUserName(), 'Journal approved', null, newDataString).subscribe();
+    this.openConfirmationPopup('Journal has been approved');
 
   }
 
@@ -565,6 +571,7 @@ export class JournalizeComponent implements OnInit {
     });
     newDataString = journal.Reference;
     this.logData.updateAccountLog(this.comp.getUserName(), 'Journal declined', null, newDataString).subscribe();
+    this.openConfirmationPopup('Journal has been declined');
 
   }
 
@@ -596,7 +603,8 @@ export class JournalizeComponent implements OnInit {
   }
 
 
-  openConfirmationPopup() {
+  openConfirmationPopup(type: string) {
+    this.confirmationType = type;
     var modal = document.getElementById('popupModalConfirm');
     modal.classList.add('show');
     this.setTimer();

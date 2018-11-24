@@ -19,7 +19,7 @@
 
       <ng-container *ngIf="log.actionType==='Account created' || log.actionType==='Journal created'; else accountUpdated">
         <td style="vertical-align: top">{{ log.userName }}</td>
-        <td style="vertical-align: top">{{ log.actionType }}</td>
+        <td style="vertical-align: top; width: 185px">{{ log.actionType }}</td>
         <td style="width: 800px">{{'Created: ' + (log.newData) }}</td>
         <td style="vertical-align: top">{{ log.createdAt | date: 'MM/dd/yyyy HH:mm:ss'}}</td>
       </ng-container>

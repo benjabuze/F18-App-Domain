@@ -3,12 +3,18 @@
   <component name="ChangeListManager">
     <list default="true" id="ec3ea87d-68f5-40e3-aaaf-6edd681a32bf" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../client2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../client2/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client2/src/app/individual-journal/individual-journal.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../client2/src/app/individual-journal/individual-journal.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client2/src/app/individual-journal/individual-journal.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../client2/src/app/individual-journal/individual-journal.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client2/src/app/journal.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../client2/src/app/journal.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client2/src/app/add-user/add-user.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/../client2/src/app/add-user/add-user.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client2/src/app/add-user/add-user.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../client2/src/app/add-user/add-user.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client2/src/app/add-user/add-user.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../client2/src/app/add-user/add-user.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client2/src/app/chart-of-accounts/chart-of-accounts.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/../client2/src/app/chart-of-accounts/chart-of-accounts.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client2/src/app/chart-of-accounts/chart-of-accounts.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../client2/src/app/chart-of-accounts/chart-of-accounts.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client2/src/app/chart-of-accounts/chart-of-accounts.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../client2/src/app/chart-of-accounts/chart-of-accounts.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../client2/src/app/journalize/journalize.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../client2/src/app/journalize/journalize.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../client2/src/app/journalize/journalize.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../client2/src/app/journalize/journalize.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/model/journal.model.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/model/journal.model.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client2/src/app/user-log/user-log.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../client2/src/app/user-log/user-log.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client2/src/app/user-page/user-page.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../client2/src/app/user-page/user-page.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client2/src/assets/logo2.png" beforeDir="false" afterPath="$PROJECT_DIR$/../client2/src/assets/logo2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/chartAccount.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/chartAccount.controller.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -178,26 +184,26 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="js" value="151" />
+          <entry key="js" value="222" />
           <entry key="json" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="JSON" value="1" />
-          <entry key="JavaScript" value="151" />
+          <entry key="JavaScript" value="222" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="js" value="17" />
+          <entry key="js" value="19" />
           <entry key="json" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="JSON" value="1" />
-          <entry key="JavaScript" value="17" />
+          <entry key="JavaScript" value="19" />
         </counts>
       </usages-collector>
     </session>
@@ -216,35 +222,35 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/server.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="36" />
+            <state relative-caret-position="323">
+              <caret line="39" column="18" selection-start-line="39" selection-start-column="18" selection-end-line="39" selection-end-column="18" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/controllers/chartAccount.controller.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="465">
+              <caret line="73" column="58" lean-forward="true" selection-start-line="73" selection-start-column="58" selection-end-line="73" selection-end-column="58" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/model/chartAccount.model.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="527">
+              <caret line="31" column="10" lean-forward="true" selection-start-line="31" selection-start-column="10" selection-end-line="31" selection-end-column="10" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/routes/journalFiles.routes.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="255">
               <caret line="32" column="9" lean-forward="true" selection-start-line="32" selection-start-column="9" selection-end-line="32" selection-end-column="9" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/config/env.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="16" column="5" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/routes/users.routes.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" column="16" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="50" />
             </state>
           </provider>
         </entry>
@@ -338,7 +344,6 @@
         <option value="$PROJECT_DIR$/app/model/journalFiles.model.js" />
         <option value="$PROJECT_DIR$/app/controllers/journalFiles.controller.js" />
         <option value="$PROJECT_DIR$/app/controllers/journal.controller.js" />
-        <option value="$PROJECT_DIR$/app/controllers/chartAccount.controller.js" />
         <option value="$PROJECT_DIR$/app/config/env.js" />
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/app/model/chartAccount.model.js" />
@@ -347,6 +352,7 @@
         <option value="$PROJECT_DIR$/app/routes/journalFiles.routes.js" />
         <option value="$PROJECT_DIR$/app/model/journal.model.js" />
         <option value="$PROJECT_DIR$/server.js" />
+        <option value="$PROJECT_DIR$/app/controllers/chartAccount.controller.js" />
       </list>
     </option>
   </component>
@@ -365,8 +371,8 @@
     </packageJsonPaths>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="364" />
-    <option name="y" value="36" />
+    <option name="x" value="275" />
+    <option name="y" value="11" />
     <option name="width" value="1535" />
     <option name="height" value="930" />
   </component>
@@ -423,7 +429,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543091351799" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543101191905" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../client2" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -483,15 +489,15 @@
       <workItem from="1542763610580" duration="3303000" />
       <workItem from="1542849680749" duration="748000" />
       <workItem from="1542939265980" duration="3322000" />
-      <workItem from="1543026921351" duration="4087000" />
+      <workItem from="1543026921351" duration="6099000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="168451000" />
+    <option name="totallyTimeSpent" value="170463000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="364" y="36" width="1535" height="930" extended-state="0" />
+    <frame x="275" y="11" width="1535" height="930" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2935593" />
@@ -612,13 +618,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/chartAccount.controller.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1054">
-          <caret line="62" column="44" selection-start-line="62" selection-start-column="44" selection-end-line="62" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/model/journalAccounts.model.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
@@ -643,13 +642,6 @@
     <entry file="file://$PROJECT_DIR$/app/model/generalLedger.model.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-204" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/model/chartAccount.model.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="31" column="10" lean-forward="true" selection-start-line="31" selection-start-column="10" selection-end-line="31" selection-end-column="10" />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/model/users.model.js">
@@ -708,13 +700,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="36" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/routes/log.routes.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
@@ -733,6 +718,27 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="32" column="9" lean-forward="true" selection-start-line="32" selection-start-column="9" selection-end-line="32" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="39" column="18" selection-start-line="39" selection-start-column="18" selection-end-line="39" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/model/chartAccount.model.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="31" column="10" lean-forward="true" selection-start-line="31" selection-start-column="10" selection-end-line="31" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/chartAccount.controller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="73" column="58" lean-forward="true" selection-start-line="73" selection-start-column="58" selection-end-line="73" selection-end-column="58" />
         </state>
       </provider>
     </entry>
