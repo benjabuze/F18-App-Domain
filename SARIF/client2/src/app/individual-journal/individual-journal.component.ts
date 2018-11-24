@@ -33,6 +33,7 @@ export class IndividualJournalComponent implements OnInit {
     CreatedBy: '',
     FileID: 0,
     Type: '',
+    FileName: '',
     JournalAccounts: [],
     acceptance: '',
   };
@@ -86,34 +87,15 @@ export class IndividualJournalComponent implements OnInit {
 
   }
 
-  getJournalFile(event: number){
+  getJournalFile(event: number, filename: string){
     //this.http.post<any>(this.fileRetrieve, {jID: event}, httpOptions).subscribe( result => {
       //var newBlob = new Blob([result.data], { type: "application/pdf"});
 
       this.journalServ.downloadReport(event).subscribe(data => {
         console.log(data);
-        saveAs(data, 'Balance Sheet (1).pdf');
+        saveAs(data, filename);
       });
 
-
-       /*
-      console.log(result.data);
-      var res = result.data;
-      for(let r of res){
-        if(r == 10){
-          this.documentInfo = this.documentInfo + '\n';
-        }
-        else {
-          let res2 = String.fromCharCode(r);
-          this.documentInfo = this.documentInfo + res2;
-        }
-      }
-      console.log(this.documentInfo);
-
-    });
-    var modal = document.getElementById('viewSource');
-    modal.style.display = "block";
-    */
   }
   closeFile() {
     this.documentInfo = '';

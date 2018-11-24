@@ -219,7 +219,7 @@
        </tr>
         <tr style=" background-color: transparent" *ngIf="journal.FileID != null && journal.FileID > 0">
           <td  class="accountslist">
-            <button class="btn btn-link " style="color: dodgerblue" (click)="getJournalFile(journal.FileID)" >View Document</button>
+            <button class="btn btn-link " style="color: dodgerblue" (click)="getJournalFile(journal.FileID, journal.FileName)" >{{"\u21E9"+'  View Document -' + journal.FileName}}</button>
           </td>
         </tr>
       </table>

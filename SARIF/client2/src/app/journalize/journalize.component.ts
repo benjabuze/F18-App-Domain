@@ -17,6 +17,7 @@ import { Router } from '@angular/router';
 import {SharedDataService } from '../services/shared-data.service';
 import createNumberMask from 'text-mask-addons/dist/createNumberMask';
 import {UserLogService} from '../services/user-log.service';
+import saveAs from 'file-saver';
 
 const httpOptions = {
   headers: new HttpHeaders({
@@ -391,6 +392,7 @@ export class JournalizeComponent implements OnInit {
         console.log(result);
         this.myInputVariable.nativeElement.value = "";
         fileID = result;
+        this.journalNew.FileName = this.selectedFile.name;
       }
 
       let id: number;
@@ -577,24 +579,15 @@ export class JournalizeComponent implements OnInit {
   }
 
 
-  getJournalFile(event: number){
-    this.http.post<any>(this.fileRetrieve, {jID: event}, httpOptions).subscribe( result => {
-      console.log(result.FileData.data);
-      var res = result.FileData.data;
-      for(let r of res){
-        if(r == 10){
-          this.documentInfo = this.documentInfo + '\n';
-        }
-        else {
-          let res2 = String.fromCharCode(r);
-          this.documentInfo = this.documentInfo + res2;
-        }
-      }
-      console.log(this.documentInfo);
+  getJournalFile(event: number, filename: string){
+    //this.http.post<any>(this.fileRetrieve, {jID: event}, httpOptions).subscribe( result => {
+    //var newBlob = new Blob([result.data], { type: "application/pdf"});
 
+    this.journalServ.downloadReport(event).subscribe(data => {
+      console.log(data);
+      saveAs(data, filename);
     });
-    var modal = document.getElementById('viewSource');
-    modal.style.display = "block";
+
   }
   closeFile() {
     this.documentInfo = '';

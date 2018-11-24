@@ -8,6 +8,7 @@ export class Journal {
   CreatedBy: string;
   Type: string;
   FileID: number;
+  FileName: string;
   JournalAccounts: JournalAccount[];
   acceptance: string;
 }

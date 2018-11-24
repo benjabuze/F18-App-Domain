@@ -30,6 +30,10 @@ module.exports = (sequelize, Sequelize) => {
             type: Sequelize.INTEGER,
             allowNull: true,
         },
+        FileName: {
+            type: Sequelize.STRING,
+            allowNull: true,
+        },
         acceptance: {
             type: Sequelize.STRING,
             allowNull: true,
