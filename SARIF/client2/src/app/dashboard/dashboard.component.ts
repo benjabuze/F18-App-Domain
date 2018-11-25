@@ -56,6 +56,12 @@ export class DashboardComponent implements OnInit {
     backgroundColor: ['rgba(255,0,255,0.7)', 'rgba(0,255,255,0.7)']}
   ];
 
+  public lineChartLabels3:Array<any> = ['Curr. Liabilities', 'Curr. Assets'];
+  public pieChartData3:number[] = [0, 0];
+
+  public lineChartLabels4:Array<any> = ['Curr. Liabilities', 'Curr. Assets', 'Sales'];
+  public pieChartData4:number[] = [0, 0, 0];
+
   public barChartOptions:any = {
     scaleShowVerticalLines:false,
     responsive:true,
@@ -177,6 +183,8 @@ export class DashboardComponent implements OnInit {
 
     this.pieChartData = [this.netIncome, this.totalAssets];
     this.pieChartEquityData = [this.netIncome, this.totalEquity];
+    this.pieChartData3 = [this.currentLiabilites, this.currentAssets];
+    this.pieChartData4 = [this.currentLiabilites, this.currentAssets, 0];
 
 
   }

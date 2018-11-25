@@ -100,7 +100,7 @@ export class BalanceSheetComponent implements OnInit {
       this.totalExpense = +this.totalExpense + +acc.currentBalance;
     }
     for(let acc of this.accounts){
-      if(acc.accountName == 'Retained Earnings'){
+      if(acc.accountName == 'Retained Earnings' && acc.currentBalance == 0){
         acc.currentBalance = +this.totalRevenue - +this.totalExpense;
         this.stockholdersEquity.push(acc);
       }

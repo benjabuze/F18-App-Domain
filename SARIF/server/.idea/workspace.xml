@@ -3,10 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="ec3ea87d-68f5-40e3-aaaf-6edd681a32bf" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../client2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../client2/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client2/src/app/balance-sheet/balance-sheet.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../client2/src/app/balance-sheet/balance-sheet.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../client2/src/app/balance-sheet/balance-sheet.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../client2/src/app/balance-sheet/balance-sheet.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client2/src/app/journalize/journalize.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../client2/src/app/journalize/journalize.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client2/src/app/trial-balance/trial-balance.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../client2/src/app/trial-balance/trial-balance.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client2/src/app/dashboard/dashboard.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../client2/src/app/dashboard/dashboard.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client2/src/app/dashboard/dashboard.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../client2/src/app/dashboard/dashboard.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -420,7 +420,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543121328238" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543123672497" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../client2" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -489,7 +489,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="275" y="11" width="1535" height="930" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2935593" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
