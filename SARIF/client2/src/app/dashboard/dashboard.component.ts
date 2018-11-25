@@ -55,6 +55,12 @@ export class DashboardComponent implements OnInit {
   public colors2:Array<any> = [{
     backgroundColor: ['rgba(255,0,255,0.7)', 'rgba(0,255,255,0.7)']}
   ];
+  public colors3:Array<any> = [{
+    backgroundColor: ['rgba(255,255,0,0.7)', 'rgba(0,255,0,0.7)']}
+  ];
+  public colors4:Array<any> = [{
+    backgroundColor: ['rgba(0,128,128,0.7)', 'rgba(128,0,128,0.7)', 'rgba(0,255,255,0.7)']}
+  ];
 
   public lineChartLabels3:Array<any> = ['Curr. Liabilities', 'Curr. Assets'];
   public pieChartData3:number[] = [0, 0];

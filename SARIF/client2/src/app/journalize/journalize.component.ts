@@ -184,11 +184,11 @@ export class JournalizeComponent implements OnInit {
     this.accounts = result;
     console.log("Hello");
     for (let account of this.accounts) {
-      if (account.normalSide == 'Debit') {
+      if (account.normalSide == 'Debit' && account.active == 'Active') {
         this.debitAccounts.push(account.accountName);
         console.log("Debit: " + account.accountName)
       }
-      else {
+      else if(account.normalSide == 'Credit' && account.active == 'Active'){
         this.creditAccounts.push(account.accountName);
         console.log("Credit: " + account.accountName)
       }
