@@ -513,6 +513,7 @@ export class JournalizeComponent implements OnInit {
               CoA.currentBalance = +CoA.currentBalance + +ledger.DebitAmount;
               await this.coaService.updateAccount(CoA).toPromise();
 
+
             }
             else {
               CoA.currentBalance = +CoA.currentBalance - +ledger.CreditAmount;
@@ -532,6 +533,7 @@ export class JournalizeComponent implements OnInit {
 
             }
           }
+
           break;
         }
       }
@@ -551,6 +553,7 @@ export class JournalizeComponent implements OnInit {
     });
     newDataString = journal.Reference;
     this.logData.updateAccountLog(this.comp.getUserName(), 'Journal approved', null, newDataString).subscribe();
+    this.viewJournalsSort('JId', 'ASC', 'all', this.criteria, this.approvalType);
     this.openConfirmationPopup('Journal has been approved');
 
   }
@@ -572,6 +575,7 @@ export class JournalizeComponent implements OnInit {
     newDataString = journal.Reference;
     this.logData.updateAccountLog(this.comp.getUserName(), 'Journal declined', null, newDataString).subscribe();
     this.openConfirmationPopup('Journal has been declined');
+    this.viewJournalsSort('JId', 'ASC', 'all', this.criteria, this.approvalType);
 
   }
 

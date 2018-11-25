@@ -30,6 +30,7 @@ export class BalanceSheetComponent implements OnInit {
   totalEquitynum = 0;
   totalRevenue = 0;
   totalExpense = 0;
+  totalCurrentLiabilities = 0;
 
 
 
@@ -62,13 +63,23 @@ export class BalanceSheetComponent implements OnInit {
       else if(acc.accountSubType =='Property, Plant, and Equipment' && acc.currentBalance != 0){
         this.property_plant_equip.push(acc);
       }
-      else if(acc.accountSubType == "Stocholders' Equity" && acc.currentBalance != 0) {
+      else if(acc.accountSubType == "Stockholders' Equity" && acc.currentBalance != 0) {
         this.stockholdersEquity.push(acc);
       }
       else {
         console.log('neither');
       }
     }
+    this.currentAssets.sort(function(a, b) {
+      var textA = a.accountNumber;
+      var textB = b.accountNumber;
+      return (textA < textB) ? -1 : (textA > textB) ? 1 : 0;
+    });
+    this.currentLiabilities.sort(function(a, b) {
+      var textA = a.accountNumber;
+      var textB = b.accountNumber;
+      return (textA < textB) ? -1 : (textA > textB) ? 1 : 0;
+    });
 
    //calculate retained earnings
     for(let acc of this.accounts){
@@ -99,6 +110,7 @@ export class BalanceSheetComponent implements OnInit {
     this.totalProperty();
     this.totalLiabilities();
     this.totalEquity();
+    this.totalcurrentLiabilities();
   }
 
   totalCurrAssets(){
@@ -109,6 +121,11 @@ export class BalanceSheetComponent implements OnInit {
   totalProperty(){
     for(let acc of this.property_plant_equip){
       this.totalPropertynum = +this.totalPropertynum + +acc.currentBalance
+    }
+  }
+  totalcurrentLiabilities(){
+    for(let acc of this.currentLiabilities){
+      this.totalCurrentLiabilities = +this.totalCurrentLiabilities + +acc.currentBalance
     }
   }
   totalLiabilities(){
