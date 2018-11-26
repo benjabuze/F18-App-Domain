@@ -77,7 +77,7 @@ export class ChartOfAccountsComponent implements OnInit {
 
   ngOnInit() {
     this.onOpened();
-    this.viewAccountsSort('caId','ASC', 'All', null);
+    this.viewAccountsSort('accountNumber','ASC', 'All', null);
     //this.viewAccounts();
 
 
@@ -342,5 +342,14 @@ export class ChartOfAccountsComponent implements OnInit {
       modal.classList.remove('show');
     });
   }
+  convertNumNegative(num: number){
+    if(num < 0){
+      return +Math.abs(num) ;
+    }
+    else {
+      return num
+    }
+  }
+
 }
 

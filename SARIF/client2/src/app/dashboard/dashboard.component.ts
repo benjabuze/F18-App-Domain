@@ -37,6 +37,8 @@ export class DashboardComponent implements OnInit {
   totalLiabilities = 0;
   netIncome = 0;
   salesTotal = 0;
+  workingCapital = 0;
+
   netProfitMargin = '';
   grossProfitMargin = '';
   public lineChartOptions:any = {
@@ -62,10 +64,10 @@ export class DashboardComponent implements OnInit {
     backgroundColor: ['rgba(0,128,128,0.7)', 'rgba(128,0,128,0.7)', 'rgba(0,255,255,0.7)']}
   ];
 
-  public lineChartLabels3:Array<any> = ['Curr. Liabilities', 'Curr. Assets'];
+  public lineChartLabels3:Array<any> = [['Current', 'Liabilities'], ['Current', 'Assets']];
   public pieChartData3:number[] = [0, 0];
 
-  public lineChartLabels4:Array<any> = ['Curr. Liabilities', 'Curr. Assets', 'Sales'];
+  public lineChartLabels4:Array<any> = [['Current', 'Liabilities'], ['Current', 'Assets'], 'Sales'];
   public pieChartData4:number[] = [0, 0, 0];
 
   public barChartOptions:any = {
@@ -180,6 +182,8 @@ export class DashboardComponent implements OnInit {
 
     this.returnOnEquity = parseFloat((+this.returnOnEquity * 100).toFixed(2));
     console.log('return on equity: '+ this.returnOnEquity);
+
+    this.workingCapital = +this.currentAssets - +this.currentLiabilites
 
     //calculate Net Profit margin
     if(this.salesTotal == 0){
